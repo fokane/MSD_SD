@@ -172,9 +172,8 @@ void APP_Initialize ( void )
     appData.state = APP_STATE_INIT;
 
     
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
+    /* Set device layer handle as invalid */
+    appData.usbDeviceHandle = USB_DEVICE_HANDLE_INVALID;
 }
 
 
