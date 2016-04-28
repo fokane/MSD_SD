@@ -152,7 +152,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>4A84AE26EDE4F6389CB46C41F99747D1</Checksum>
+        <Checksum>DC3650A7D4C237E330FF9FCE8BEACC56</Checksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -185,7 +185,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>71A9ECC6AEDEDBDC023ACD418136D727</Checksum>
+        <Checksum>D548FA2F6DCB5BE15E0A8615EF8723A9</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
@@ -199,7 +199,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>47753CC0B200D740202FB917573E4F33</Checksum>
+        <Checksum>A7D848A0610EBB90A5EB499E2A7BBDBF</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_master_ebm_tasks.c</Name>
