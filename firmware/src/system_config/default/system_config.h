@@ -109,30 +109,6 @@ extern "C" {
 #define SYS_TMR_INTERRUPT_NOTIFICATION  false
 
 
-/*** File System Service Configuration ***/
-
-#define SYS_FS_MEDIA_NUMBER         	1
-
-#define SYS_FS_VOLUME_NUMBER		1
-
-#define SYS_FS_AUTOMOUNT_ENABLE		false
-#define SYS_FS_MAX_FILES	    	1
-#define SYS_FS_MAX_FILE_SYSTEM_TYPE 	1
-#define SYS_FS_MEDIA_MAX_BLOCK_SIZE  	512
-#define SYS_FS_MEDIA_MANAGER_BUFFER_SIZE 512
-
-
-#define SYS_FS_MEDIA_TYPE_IDX0 				
-#define SYS_FS_TYPE_IDX0 					
-
-
-
-
-
-
-
-
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Configuration
@@ -165,7 +141,6 @@ extern "C" {
 #define DRV_SDCARD_QUEUE_POOL_SIZE      10
 #define DRV_SDCARD_SPI_DRV_INSTANCE     0
 
-#define DRV_SDCARD_SYS_FS_REGISTER
 
 
 
@@ -233,7 +208,7 @@ extern "C" {
 
 
 /* Number of Endpoints used */
-#define DRV_USBFS_ENDPOINTS_NUMBER    1
+#define DRV_USBFS_ENDPOINTS_NUMBER    2
 
 
 
@@ -245,7 +220,7 @@ extern "C" {
 
 
 
-#define USB_DEVICE_MSD_NUM_SECTOR_BUFFERS 1
+#define USB_DEVICE_MSD_NUM_SECTOR_BUFFERS 8
 
 
 

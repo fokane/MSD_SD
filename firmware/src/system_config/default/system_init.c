@@ -208,25 +208,6 @@ const SYS_DEVCON_INIT sysDevconInit =
 };
 
 // </editor-fold>
-// <editor-fold defaultstate="collapsed" desc="SYS_FS Initialization Data">
-/*** File System Initialization Data ***/
-
-const SYS_FS_MEDIA_MOUNT_DATA sysfsMountTable[SYS_FS_VOLUME_NUMBER] = 
-{
-	{NULL}
-};
-
-
-
-
-const SYS_FS_REGISTRATION_TABLE sysFSInit [ SYS_FS_MAX_FILE_SYSTEM_TYPE ] =
-{
-    {
-        .nativeFileSystemType = FAT,
-        .nativeFileSystemFunctions = &FatFsFunctions
-    }
-};
-// </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
 /*** TMR Service Initialization Data ***/
 const SYS_TMR_INIT sysTmrInitData =
@@ -601,9 +582,6 @@ void SYS_Initialize ( void* data )
     sysObj.drvUSBObject = DRV_USBFS_Initialize(DRV_USBFS_INDEX_0, (SYS_MODULE_INIT *) &drvUSBInit);
 
     /* Initialize System Services */
-
-    /*** File System Service Initialization Code ***/
-    SYS_FS_Initialize( (const void *) sysFSInit );
 
     /*** Interrupt Service Initialization Code ***/
     SYS_INT_Initialize();

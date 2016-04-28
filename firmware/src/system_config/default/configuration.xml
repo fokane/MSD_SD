@@ -27,10 +27,6 @@
         <Path>Source Files/framework/system/devcon/src</Path>
       </File>
       <File>
-        <Name>diskio.h</Name>
-        <Path>Header Files/framework/system/fs</Path>
-      </File>
-      <File>
         <Name>sys_tmr.h</Name>
         <Path>Header Files/framework/system/tmr</Path>
       </File>
@@ -43,20 +39,12 @@
         <Path>Header Files/framework/usb</Path>
       </File>
       <File>
-        <Name>sys_fs_media_manager.c</Name>
-        <Path>Source Files/framework/system/fs/src/dynamic</Path>
-      </File>
-      <File>
         <Name>usb_device_msd.c</Name>
         <Path>Source Files/framework/usb/src/dynamic</Path>
       </File>
       <File>
         <Name>bsp_sys_init.c</Name>
         <Path>Source Files/bsp/pic32mx795_pim+e16</Path>
-      </File>
-      <File>
-        <Name>sys_fs.h</Name>
-        <Path>Header Files/framework/system/fs</Path>
       </File>
       <File>
         <Name>sys_ports.h</Name>
@@ -99,16 +87,8 @@
         <Path>Source Files/framework/driver/spi</Path>
       </File>
       <File>
-        <Name>ffconf.h</Name>
-        <Path>Header Files/framework/system/fs</Path>
-      </File>
-      <File>
         <Name>drv_tmr.c</Name>
         <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
-      </File>
-      <File>
-        <Name>ff.c</Name>
-        <Path>Source Files/framework/system/fs</Path>
       </File>
       <File>
         <Name>usb_device.h</Name>
@@ -147,24 +127,8 @@
         <Path>Source Files/framework/driver/usb/usbfs/src/dynamic</Path>
       </File>
       <File>
-        <Name>sys_fs.c</Name>
-        <Path>Source Files/framework/system/fs/src/dynamic</Path>
-      </File>
-      <File>
         <Name>sys_module.h</Name>
         <Path>Header Files/framework/system/common</Path>
-      </File>
-      <File>
-        <Name>ff.h</Name>
-        <Path>Header Files/framework/system/fs</Path>
-      </File>
-      <File>
-        <Name>diskio.c</Name>
-        <Path>Source Files/framework/system/fs</Path>
-      </File>
-      <File>
-        <Name>sys_fs_media_manager.h</Name>
-        <Path>Header Files/framework/system/fs</Path>
       </File>
       <File>
         <Name>sys_devcon_pic32mx.c</Name>
@@ -188,7 +152,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>19FA83051E9F9B9F045A75A067ADA598</Checksum>
+        <Checksum>57AD9D80B71C0256DC7E1B66ABE82A22</Checksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -197,7 +161,7 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>10AB8BE35758E5D10D06F3EE74FFBD2A</Checksum>
+        <Checksum>C83719E045737D92B8B2EBA4DC3F76E5</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -216,12 +180,12 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>4577E76CAE8401A675105A864C0567DA</Checksum>
+        <Checksum>28CF519203D10DC6F4D37A13784457F8</Checksum>
       </Template>
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>7D15CE8E2D6015DA962442DCFA4FA0D5</Checksum>
+        <Checksum>E4B3BEC43116080BFCFD1FE3C46FA051</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
