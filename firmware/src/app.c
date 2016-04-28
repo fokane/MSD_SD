@@ -78,6 +78,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 APP_DATA appData;
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -141,33 +142,21 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            bool appInitialized = true;
-       
-        
-            if (appInitialized)
-            {
             
-                appData.state = APP_STATE_SERVICE_TASKS;
-            }
             break;
         }
-
-        case APP_STATE_SERVICE_TASKS:
+        case APP_STATE_IDLE:
         {
-        
+            Nop();
+            Nop();
             break;
         }
-
-        /* TODO: implement your application state machine.*/
-        
-
-        /* The default state should never be executed. */
         default:
         {
-            /* TODO: Handle error in application's state machine. */
             break;
         }
     }
+
 }
 
  

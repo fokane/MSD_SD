@@ -106,10 +106,10 @@ const DRV_SDCARD_INIT drvSDCardInit =
 {
     .spiId = SPI_ID_2,
     .spiIndex = 0,
-    .sdcardSpeedHz = 20000000,
+    .sdcardSpeedHz = 10000000,
     .spiClk = CLK_BUS_PERIPHERAL_1,
-    .chipSelectPort = PORT_CHANNEL_A,
-    .chipSelectBitPosition = PORTS_BIT_POS_1,
+    .chipSelectPort = PORT_CHANNEL_B,
+    .chipSelectBitPosition = PORTS_BIT_POS_9,
 };
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="DRV_SPI Initialization Data"> 
