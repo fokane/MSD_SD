@@ -85,8 +85,61 @@ APP_DATA appData;
 // *****************************************************************************
 // *****************************************************************************
 
-/* TODO:  Add any necessary callback functions.
-*/
+void APP_USBDeviceEventHandler( USB_DEVICE_EVENT event, void * pEventData, uintptr_t context )
+{
+    /* This is an example of how the context parameter
+       in the event handler can be used.*/
+
+    APP_DATA * appData = (APP_DATA*)context;
+
+    switch( event )
+    {
+        case USB_DEVICE_EVENT_RESET:
+        case USB_DEVICE_EVENT_DECONFIGURED:
+
+            /* Device was reset or deconfigured. Update LED status */
+            BSP_LEDOn(BSP_LED_4);
+            BSP_LEDOn(BSP_LED_5);
+            BSP_LEDOn(BSP_LED_3);
+            break;
+
+        case USB_DEVICE_EVENT_CONFIGURED:
+
+            /* Device is configured. Update LED status */
+            BSP_LEDOff( BSP_LED_4 );
+            BSP_LEDOff( BSP_LED_5 );
+            BSP_LEDOn( BSP_LED_3 );
+            break;
+
+        case USB_DEVICE_EVENT_SUSPENDED:
+
+            /* Update LED status */
+            BSP_LEDOff( BSP_LED_4 );
+            BSP_LEDOn( BSP_LED_5 );
+            BSP_LEDOn( BSP_LED_3 );
+            break;
+
+        case USB_DEVICE_EVENT_POWER_DETECTED:
+
+            /* VBUS is detected. Attach the device. */
+            USB_DEVICE_Attach(appData->usbDeviceHandle);
+            break;
+
+        case USB_DEVICE_EVENT_POWER_REMOVED:
+
+            /* VBUS is not detected. Detach the device */
+            USB_DEVICE_Detach(appData->usbDeviceHandle);
+            break;
+
+        /* These events are not used in this demo */
+        case USB_DEVICE_EVENT_RESUMED:
+        case USB_DEVICE_EVENT_ERROR:
+        case USB_DEVICE_EVENT_SOF:
+        default:
+            break;
+    }
+}
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -142,7 +195,17 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
+            appData.usbDeviceHandle = USB_DEVICE_Open(USB_DEVICE_INDEX_0, DRV_IO_INTENT_READWRITE);
+
+            if(appData.usbDeviceHandle != USB_DEVICE_HANDLE_INVALID)
+            {
+                /* Set the Event Handler. We will start receving events after
+                 * the handler is set */
+                USB_DEVICE_EventHandlerSet(appData.usbDeviceHandle, APP_USBDeviceEventHandler, (uintptr_t)&appData);
+            }
             
+            // change state
+            appData.state = APP_STATE_IDLE;
             break;
         }
         case APP_STATE_IDLE:

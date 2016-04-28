@@ -152,7 +152,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/default</Path>
-        <Checksum>57AD9D80B71C0256DC7E1B66ABE82A22</Checksum>
+        <Checksum>4A84AE26EDE4F6389CB46C41F99747D1</Checksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -185,7 +185,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/default</Path>
-        <Checksum>E4B3BEC43116080BFCFD1FE3C46FA051</Checksum>
+        <Checksum>71A9ECC6AEDEDBDC023ACD418136D727</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>

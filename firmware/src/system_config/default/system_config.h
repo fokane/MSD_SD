@@ -91,7 +91,7 @@ extern "C" {
 #define SYS_INT                     true
 
 /*** Ports System Service Configuration ***/
-#define SYS_PORT_AD1PCFG        ~0xffdf
+#define SYS_PORT_AD1PCFG        ~0xffff
 #define SYS_PORT_CNPUE          0x0
 #define SYS_PORT_CNEN           0x0
 
@@ -232,7 +232,7 @@ extern "C" {
 #define USB_DEVICE_INSTANCES_NUMBER     1
 
 /* EP0 size in bytes */
-#define USB_DEVICE_EP0_BUFFER_SIZE      64
+#define USB_DEVICE_EP0_BUFFER_SIZE      8
 
 
 

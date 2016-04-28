@@ -87,11 +87,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #pragma config USERID =     0xffff
 #pragma config FSRSSEL =    PRIORITY_7
-#pragma config FMIIEN =     ON
-#pragma config FETHIO =     ON
-#pragma config FCANIO =     ON
-#pragma config FUSBIDIO =   ON
-#pragma config FVBUSONIO =  ON
+#pragma config FMIIEN =     OFF
+#pragma config FETHIO =     OFF
+#pragma config FCANIO =     OFF
+#pragma config FUSBIDIO =   OFF
+#pragma config FVBUSONIO =  OFF
 // </editor-fold>
 
 // *****************************************************************************
